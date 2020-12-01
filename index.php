@@ -17,7 +17,7 @@ echo $con;
         <h3>Welsome to Perosnal USE</h3>
         <?php
         if(isset($_POST['link'])){
-            $url = $mysqli->real_escape_string($_POST['link']);
+            $url = $con->real_escape_string($_POST['link']);
             $query = "INSERT INTO store (storeurl) VALUES ('".$url."')";
             if($con->query($query)){
         ?>
