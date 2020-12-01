@@ -23,7 +23,8 @@ if ($con->connect_error) {
         if(isset($_POST['link'])){
             $url = $con->real_escape_string($_POST['link']);
             $query = "INSERT INTO store (storeurl) VALUES ('".$url."')";
-            if($con->query($query)){
+           echo $query;
+//             if($con->query($query)){
         ?>
         <div style="width:100%;height:500px">
             <video class="video-js" controls preload="auto" style="width:100%;height:500px;" data-setup="{}" autoplay>
@@ -39,7 +40,7 @@ if ($con->connect_error) {
         </div>
         <?php
         }
-        }
+//         }
 
         ?><br><br>
         <form method="post" action="index.php">
