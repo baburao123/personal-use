@@ -21,7 +21,8 @@ if ($con->connect_error) {
         <h3>Welsome to Perosnal USE</h3>
         <?php
         if(isset($_POST['link'])){
-            $url = $con->real_escape_string($_POST['link']);
+           $url = $_POST['link'];
+//             $url = $con->real_escape_string($_POST['link']);
             $query = "INSERT INTO store (storeurl) VALUES ('".$url."')";
            echo $query;
 //             if($con->query($query)){
