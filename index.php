@@ -1,6 +1,10 @@
 <?php
 include "connecyion.php";
-echo $con;
+if ($con->connect_error) {
+   die("Connection failed: " . $con->connect_error);
+}else{
+  echo "Connected successfully";
+}
 ?>
 <!DOCTYPE html>
 <html>
