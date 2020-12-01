@@ -16,10 +16,10 @@ include "connecyion.php";
         <h3>Welsome to Perosnal USE</h3>
         <?php
         if(isset($_POST['link'])){
-           $url = $_POST['link'];
-           $url = $con->real_escape_string($_POST['link']);
-           $query = "INSERT INTO store (storeurl) VALUES ('".$url."')";
-            if($con->query($query)){
+//            $url = $_POST['link'];
+//            $url = $con->real_escape_string($_POST['link']);
+//            $query = "INSERT INTO store (storeurl) VALUES ('".$url."')";
+//             if($con->query($query)){
         ?>
         <div style="width:100%;height:500px">
             <video class="video-js" controls preload="auto" style="width:100%;height:500px;" data-setup="{}" autoplay>
@@ -35,7 +35,7 @@ include "connecyion.php";
         </div>
         <?php
         }
-        }
+//         }
 
         ?><br><br>
         <form method="post" action="index.php">
