@@ -18,6 +18,9 @@ echo "hello";
         <h3>Welsome to Perosnal USE</h3>
         <?php
         if(isset($_POST['link'])){
+            $url = $mysqli->real_escape_string($_POST['link']);
+            $query = "INSERT INTO store (storeurl) VALUES ('".$url."')";
+            if($con->query($query)){
         ?>
         <div style="width:100%;height:500px">
             <video class="video-js" controls preload="auto" style="width:100%;height:500px;" data-setup="{}" autoplay>
@@ -32,6 +35,7 @@ echo "hello";
             </video>
         </div>
         <?php
+        }
         }
 
         ?><br><br>
