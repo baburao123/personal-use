@@ -1,5 +1,6 @@
 <?php
-
+include "connecyion.php";
+echo $con;
 ?>
 <!DOCTYPE html>
 <html>
