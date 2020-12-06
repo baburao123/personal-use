@@ -22,7 +22,7 @@ include "connection.php";
         <button type="button" id="uploadbtn" class="btn btn-info">Upload</button>
         <br>
         <br>
-        <button type="button" onclick="generate()" class="btn btn-info">Generate</button>
+        <button type="button" onclick="generate()" class="btn btn-danger">Generate</button>
         <div id="progress-deatils">
         </div>
         <br>
@@ -57,6 +57,7 @@ include "connection.php";
             $("#uploadbtn").on("click",function(){
                 var data = new FormData();
                 data.append("url",$("#url-here").val());
+                data.append("action","Uplaodvideo");
                 $("#url-here").val("");                
                 var pid = document.createElement("div");
                 pid.setAttribute("id","progress-bar-to-delete-"+pgid.toString());
@@ -104,7 +105,17 @@ include "connection.php";
                     }
                 });
             });
-
+            
+            function generate(){
+                $.ajax({
+                    url:"index-acton.php",
+                    type:"POST",
+                    data:{action:"generate"},
+                    success:function(result){
+                        cosole.log(result);
+                    }
+                });
+            }
         </script>
     </body>
 </html>
