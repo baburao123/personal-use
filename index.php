@@ -94,6 +94,7 @@ include "connection.php";
                     cache: false,
                     data:data,
                     success:function(result){
+                        console.log(result);
                         if(result==1){
                             alert("something went wrong");
                         }else{
