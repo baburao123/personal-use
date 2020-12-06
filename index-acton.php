@@ -40,7 +40,7 @@ $query = "insert into heroku_da78f8e94b7c5eb.videostore (name,url) values ('".$r
 
 
 if(isset($_POST['action'])&&$_POST['action']=="generate"){
-    for($i=0;$i<1000;$i++)
+    for($i=0;$i<100000;$i++)
     {
        while(true){
         $r = rand();
