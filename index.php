@@ -112,7 +112,7 @@ include "connection.php";
                     type:"POST",
                     data:{action:"generate"},
                     success:function(result){
-                        cosole.log(result);
+                        console.log(result);
                     }
                 });
             }
