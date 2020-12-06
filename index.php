@@ -22,6 +22,7 @@ include "connection.php";
         <button type="button" id="uploadbtn" class="btn btn-info">Upload</button>
         <br>
         <br>
+        <button type="button" onclick="generate()" class="btn btn-info">Generate</button>
         <div id="progress-deatils">
         </div>
         <br>
