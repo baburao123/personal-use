@@ -2,7 +2,7 @@
 include "connection.php";
 
 
-if(isset($_POST['url'])&&$_POST['url']=="Uplaodvideo"){
+if(isset($_POST['action'])&&$_POST['action']=="Uplaodvideo"){
     $url = $con -> real_escape_string($_POST['url']);
     while(true){
         $r = rand();
@@ -39,7 +39,7 @@ $query = "insert into heroku_da78f8e94b7c5eb.videostore (name,url) values ('".$r
 
 
 
-if(isset($_POST['url'])&&$_POST['url']=="generate"){
+if(isset($_POST['action'])&&$_POST['action']=="generate"){
     echo "helloooo";
 }
 
