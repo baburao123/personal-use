@@ -22,7 +22,7 @@ include "connection.php";
         <button type="button" id="uploadbtn" class="btn btn-info">Upload</button>
         <br>
         <br>
-        <button type="button" onclick="generate()" class="btn btn-danger">Generate</button>
+        <button type="button" onclick="generate()" class="btn btn-danger" id="generatebtnn">Generate</button>
         <div id="progress-deatils">
         </div>
         <br>
@@ -107,11 +107,13 @@ include "connection.php";
             });
             
             function generate(){
+                $("#generatebtnn").prop("disabled",true);
                 $.ajax({
                     url:"index-acton.php",
                     type:"POST",
                     data:{action:"generate"},
                     success:function(result){
+                        $("#generatebtnn").prop("disabled",false);
                         console.log(result);
                     }
                 });
