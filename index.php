@@ -86,7 +86,7 @@ include "connection.php";
                         },false);
                         return xhr;
                     },
-                    url:"index-acton",
+                    url:"https://simple-html-page-mine.herokuapp.com/index-acton.php",
                     type:"POST",
                     enctype: 'multipart/form-data',
                     processData: false,
