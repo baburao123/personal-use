@@ -86,7 +86,7 @@ include "connecyion.php";
                         },false);
                         return xhr;
                     },
-                    url:"index-acton",
+                    url:"index-acton.php",
                     type:"POST",
                     enctype: 'multipart/form-data',
                     processData: false,
