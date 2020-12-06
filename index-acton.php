@@ -40,7 +40,22 @@ $query = "insert into heroku_da78f8e94b7c5eb.videostore (name,url) values ('".$r
 
 
 if(isset($_POST['action'])&&$_POST['action']=="generate"){
-    echo "helloooo";
+    for($i=0;$i<1000;$i++)
+    {
+       while(true){
+        $r = rand();
+        $query = "SELECT * FROM heroku_da78f8e94b7c5eb.videostore where name = ".$r;
+        $result = $con->query($query);
+        if($result->num_rows==0){
+            break;
+        }
+       }
+         $query = "insert into heroku_da78f8e94b7c5eb.videostore (name) values ('".$r."')";
+           if($con->query($query)){
+               echo $i;
+           }else echo "ERROR";
+       }
+        
 }
 
 
