@@ -1,12 +1,12 @@
 <?php
-include "connection.php";
+include "connecyion.php";
 
 
 if(isset($_POST['url'])){
     $url = $con -> real_escape_string($_POST['url']);
     while(true){
         $r = rand();
-        $query = "SELECT * FROM localuse.videostore where name = ".$r;
+        $query = "SELECT * FROM heroku_da78f8e94b7c5eb.videostore where name = ".$r;
         $result = $con->query($query);
         if($result->num_rows==0){
             break;
@@ -15,7 +15,7 @@ if(isset($_POST['url'])){
 
     if(file_put_contents("videos/".$r.".mp4",file_get_contents($url))) { 
 
-        $query = "insert into localuse.videostore (name,url) values ('".$r."','".$url."')";
+        $query = "insert into heroku_da78f8e94b7c5eb.videostore (name,url) values ('".$r."','".$url."')";
         if($con->query($query)){
 ?>
 <div class="card">
